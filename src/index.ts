@@ -6,9 +6,10 @@ const catalanMessages: TranslationMessages = {
       add_filter: "Afegir filtre",
       add: "Afegir",
       back: "Tornar",
-      bulk_actions:
+      bulk_actions: 
         "1 element seleccionat |||| %{smart_count} elements seleccionats",
       cancel: "Cancel·lar",
+      clear_array_input: "Netejar la llista",
       clear_input_value: "Netejar valor",
       clone: "Clonar",
       confirm: "Confirmeu",
@@ -20,10 +21,14 @@ const catalanMessages: TranslationMessages = {
       list: "Llistar",
       refresh: "Refrescar",
       remove_filter: "Esborrar aquest filtre",
+      remove_all_filters: "Esborrar tots els filtres",
       remove: "Esborrar",
+      reset: "Restablir",
       save: "Desar",
       search: "Cercar",
+      search_columns: "Cercar columnes",
       select_all: "Seleccionar tot",
+      select_all_button: 'Seleccionar tot',
       select_row: "Selecciona aquesta fila",
       show: "Mostrar",
       sort: "Ordenar",
@@ -38,6 +43,8 @@ const catalanMessages: TranslationMessages = {
       move_down: "Moure avall",
       open: "Obrir",
       toggle_theme: "Canviar tema",
+      select_columns: "Columnes",
+      update_application: "Recarregar l'aplicació",
     },
     boolean: {
       true: "Si",
@@ -55,6 +62,8 @@ const catalanMessages: TranslationMessages = {
       show: "%{name} #%{id}",
       empty: "Encara no hi ha %{name}.",
       invite: "¿Vol afegir una?",
+      access_denied: "Accés denegat",
+      authentication_error: "Error d'autenticació",
     },
     input: {
       file: {
@@ -82,7 +91,13 @@ const catalanMessages: TranslationMessages = {
     },
     message: {
       about: "Sobre",
+      access_denied:
+        "No tens els permisos necessaris per accedir a aquesta pàgina",
       are_you_sure: "Està segur?",
+      authentication_error:
+        "El servidor d'autenticació ha retornat un error i no s'han pogut verificar les teves credencials.",
+      auth_error:
+        "S'ha produït un error en validar el testimoni d'autenticació.",
       bulk_delete_content:
         "Està segur d'eliminar l'element %{name}? |||| Està segur d'eliminar aquests %{smart_count} elements?",
       bulk_delete_title:
@@ -91,21 +106,27 @@ const catalanMessages: TranslationMessages = {
         "Esteu segur que voleu actualitzar aquest %{name}? |||| Esteu segur que voleu actualitzar aquests %{smart_count} elements?",
       bulk_update_title:
         "Actualitzar %{name} |||| Actualitza %{smart_count} %{name}",
+      clear_array_input: "Segur que vols esborrar tota la llista?",
       delete_content: "Està segur d'eliminar aquest element?",
       delete_title: "Eliminar %{name} #%{id}",
       details: "Detalls",
-      error:
+      error: 
         "S'ha prodït un error al client i la seva petició no s'ha pogut completar.",
       invalid_form: "El formulari no és vàlid. Si us plau, revisi els errors",
       loading: "La pàgina s'està carregant, esperi un moment si us plau",
       no: "No",
       not_found:
         "O bé ha escrit una URL incorrecta, o bé ha navegat a un enllaç erroni.",
+      select_all_limit_reached:
+        "Hi ha massa elements per seleccionar-los tots. Només s'han seleccionat els primers %{max} elements.",
       yes: "Sí",
       unsaved_changes:
-        "Alguns dels canvis no s'han desat. Esteu segur que voleu ignorar-les?",
+        "Alguns dels canvis no s'han desat. Esteu segur que voleu ignorar-les?",          
+      placeholder_data_warning: "Problema de xarxa: l'actualització de dades ha fallat.",
     },
     navigation: {
+      clear_filters: "Esborra filtres",
+      no_filtered_results: "No s'ha trobat cap %{name} amb els filtres actuals.",
       no_results: "Sense resultats",
       no_more_results:
         "La pàgina número %{page} està fora de rang. Provi amb la pàgina anterior.",
@@ -134,6 +155,7 @@ const catalanMessages: TranslationMessages = {
       user_menu: "Perfil",
       username: "Usuari",
       password: "Contrasenya",
+      email: "Correu electrònic",
       sign_in: "Iniciar sessió",
       sign_in_error: "Ha fallat l'autenticació, si us plau torni a provar-ho",
       logout: "Tancar sessió",
@@ -152,6 +174,8 @@ const catalanMessages: TranslationMessages = {
       canceled: "Acció cancel·lada",
       logged_out: "La seva sessió ha finalitzat, torneu a connectar-se.",
       not_authorized: "No teniu autorització per accedir a aquest recurs.",
+      application_update_available: "Hi ha una nova versió disponible.",
+      offline: "Sense connexió. No s'ha pogut obtenir dades.",
     },
     validation: {
       required: "Obligatori",
@@ -163,6 +187,7 @@ const catalanMessages: TranslationMessages = {
       email: "Ha de ser una adreça electrònica vàlida",
       oneOf: "Ha de ser un d'aquests valors: %{options}",
       regex: "Ha de complir el format (expressió regular): %{pattern}",
+      unique: "Ha de ser únic",
     },
     saved_queries: {
       label: "Consultes desades",
@@ -175,6 +200,31 @@ const catalanMessages: TranslationMessages = {
       remove_message:
         "S'eliminarà la consulta de la llista de consultes desades.",
       help: "Filtrar la llista i desar la consulta",
+    },
+    configurable: {
+      customize: "Personalitzar",
+      configureMode: "Configura aquesta pàgina",
+      inspector: {
+          title: "Inspector",
+          content: "Passa el cursor pels elements de la interfície de l'aplicació per configurar-los",
+          reset: "Restableix la configuració",
+          hideAll: "Amaga-ho tot",
+          showAll: "Mostra-ho tot",
+      },
+      Datagrid: {
+          title: "Taula de dades",
+          unlabeled: "Columna sense etiqueta #%{column}",
+      },
+      SimpleForm: {
+          title: "Formulari",
+          unlabeled: "Camp sense etiqueta #%{input}",
+      },
+      SimpleList: {
+          title: "Llista",
+          primaryText: "Text principal",
+          secondaryText: "Text secundari",
+          tertiaryText: "Text terciari",
+      },
     },
   },
 };
